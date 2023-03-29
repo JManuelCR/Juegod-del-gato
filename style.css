@@ -1,0 +1,188 @@
+* {
+  box-sizing: border-box;
+}
+
+
+html {
+  background-image: url(./assets/backgroundSpace-2.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-size: 16px;
+  text-align: center;
+}
+header nav {
+    border-bottom: 0.125rem solid white;
+    border-radius: 0.375rem;
+    display: flex;
+    justify-content: space-between;
+}
+.continerLogoAndMenu {
+  align-items: center;
+  display: flex;
+  gap: 3rem;
+  padding-bottom: 0.5rem;
+}
+.continerLogoAndMenu .menu {
+    display: flex;
+    gap: 1.5rem;
+}
+.continerLogoAndMenu .menu>a:hover {
+    text-decoration: underline;
+}
+.continerLogoAndMenu .menu > a {
+  color: white;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+.logo span {
+    font-size: 3rem;
+}
+.material-symbols-outlined {
+    animation: neonIcon 1.5s infinite alternate;
+    color: white;
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de,
+    0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;
+}
+.winner {
+    color: #e4ecf0;
+    font-family: "Ruslan Display", cursive;
+    font-size: 2rem;
+    font-weight: bold;
+    opacity: 0;
+    animation: winner 4s steps(60) infinite;
+}
+header h1 {
+  color: rgb(253, 249, 27);
+  background-color: transparent;
+  font-size: 4rem;
+  text-shadow: 0 0 20px #f5f902, 0 0 20px #f5f902, 0 0 30px #fff,
+    0 0 40px #33e79c, 0 0 70px #33e79c, 0 0 80px #33e79c, 0 0 100px #33e79c,
+    0 0 150px #33e79c;
+}
+main aside {
+    display: flex;
+    flex-direction: column;
+    float: right;
+  width: 25%;
+  margin-right: 4rem;
+  margin-top: 2.5rem;
+  align-items: center;
+}
+aside h2 {
+  color: #46f108;
+  font-size: 2.5rem;
+  font-style: oblique;
+  font-family: "Ruslan Display", cursive;
+  text-shadow: 0 0 5px #46f108, 0 0 20px #46f108, 0 0 30px #8cd6fc,
+    0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de;
+}
+.jugadores {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+.jugadores div {
+  border: 0.125rem solid rgb(243, 147, 11);
+  box-shadow: 0 0 5px #d4f615, 0 0 20px #87f62c, 0 0 30px #96ff0e,
+    0 0 40px #f5f5f5, 0 0 70px #f5f5f5, 0 0 80px #f5f5f5, 0 0 100px #f5f5f5,
+    0 0 150px #f5f5f5;
+  border-radius: 50%;
+  display: flex;
+  height: 4rem;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+}
+.jugadores div>span{
+    font-size: 4rem;
+    animation: users 1s linear infinite ;
+}
+.jugadores h3 {
+    color: white;
+    font-size: .875rem;
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    bottom: 2rem;
+}
+section .board {
+  border: 0.75rem solid rgb(7, 248, 7);
+  border-radius: 0.75rem;
+  display: grid;
+  float: left;
+  gap: 0.5rem;
+  height: 30rem;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  padding: 0.25rem;
+  margin-left: 4rem;
+  width: 30rem;
+}
+.celda {
+  background: rgb(255, 117, 11);
+  border: 0.125rem solid darkblue;
+  height: 100%;
+  width: 100%;
+}
+@keyframes neonIcon {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.5;
+  }
+}
+@keyframes winner {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+
+  20% {
+    visibility: visible;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+  }
+  40% {
+    visibility: visible;
+    clip-path: polygon(0% 0%, 50% 0%, 50% 100%, 0% 100%);
+  }
+  60% {
+    visibility: visible;
+    clip-path: polygon(50% 0%, 100% 0%, 100% 100%, 50% 100%);
+  }
+  80% {
+    visibility: visible;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 0% 50%);
+  }
+  100% {
+    visibility: visible;
+    clip-path: polygon(0% 50%, 100% 50%, 100% 100%, 0% 100%);
+  }
+}
+
+@keyframes users {
+    0% {
+      transform: translate(0, 0) rotate(0);
+    }
+    20% {
+      transform: translate(-2px, -2px) rotate(-3deg);
+    }
+    40% {
+      transform: translate(-2px, 2px) rotate(3deg);
+    }
+    60% {
+      transform: translate(2px, -2px) rotate(-3deg);
+    }
+    80% {
+      transform: translate(2px, 2px) rotate(3deg);
+    }
+    100% {
+      transform: translate(0, 0) rotate(0);
+    }
+  }
+  
