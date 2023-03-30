@@ -49,7 +49,7 @@ header nav {
 .winner {
     color: #e4ecf0;
     font-family: "Ruslan Display", cursive;
-    font-size: 2rem;
+    font-size: 3rem;
     font-weight: bold;
     opacity: 0;
     animation: winner 4s steps(60) infinite;
