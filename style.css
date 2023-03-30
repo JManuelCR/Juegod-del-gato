@@ -122,9 +122,17 @@ section .board {
   width: 30rem;
 }
 .celda {
+  align-items: center;
   background: rgb(255, 117, 11);
   border: 0.125rem solid darkblue;
+  color: rgb(37, 12, 198);
+  display: flex;
+  font-size: 6rem;
+  font-weight: bold;
   height: 100%;
+  justify-content: center;
+  text-shadow: 0 0 15px #d4f615, 0 0 20px #87f62c, 0 0 30px #96ff0e,
+  0 0 40px #f5f5f5, 0 0 70px #99efff;
   width: 100%;
 }
 @keyframes neonIcon {
